@@ -314,49 +314,170 @@ h2 {
 }
 
 .technologies {
-    padding: 90px 0;
+    padding: 120px 0;
     background: #0b1118;
     border-top: 1px solid #1d2832;
     border-bottom: 1px solid #1d2832;
 }
 
-.technologies h2 {
-    margin-bottom: 40px;
-}
-
-.technology-strip {
+.technology-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    border-top: 1px solid #26323e;
-    border-left: 1px solid #26323e;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.technology-item {
-    min-height: 110px;
+.technology-card {
+    position: relative;
+    padding: 34px;
+    min-height: 230px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background:
+        linear-gradient(145deg,
+            rgba(20, 30, 40, 0.95),
+            rgba(10, 17, 24, 0.98));
 
-    padding: 20px;
-
-    border-right: 1px solid #26323e;
-    border-bottom: 1px solid #26323e;
-
-    color: #71808d;
-
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
+    border: 1px solid #26323e;
 
     transition:
-        color 0.25s ease,
-        background 0.25s ease;
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-.technology-item:hover {
+.technology-card:hover {
+    transform: translateY(-6px);
+    border-color: #00a8ff;
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.30),
+        0 0 25px rgba(0, 168, 255, 0.08);
+}
+
+.technology-number {
+    display: block;
+
     color: #00a8ff;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 28px;
+}
+
+.technology-card h3 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.technology-card p {
+    color: #d4dbe1;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.technology-card small {
+    color: #6f7d89;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.projects {
+    padding: 130px 0;
     background: #101820;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.project-card {
+    position: relative;
+    min-height: 360px;
+    padding: 38px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background:
+        linear-gradient(145deg,
+            rgba(20, 31, 41, 0.98),
+            rgba(10, 17, 24, 0.98));
+
+    border: 1px solid #26323e;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #00a8ff;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.30),
+        0 0 30px rgba(0, 168, 255, 0.08);
+}
+
+.project-number {
+    color: #00a8ff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 45px;
+}
+
+.project-type {
+    color: #687784;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.project-text {
+    max-width: 520px;
+    color: #9aa6b2;
+    line-height: 1.7;
+}
+
+.project-tech {
+    margin-top: 40px;
+
+    color: #6d7a85;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.project-card:nth-child(1) {
+    --delay: 0s;
+}
+
+.project-card:nth-child(2) {
+    --delay: 0.12s;
+}
+
+.project-card:nth-child(3) {
+    --delay: 0.24s;
+}
+
+.project-card:nth-child(4) {
+    --delay: 0.36s;
 }
 
 .about {
@@ -713,5 +834,29 @@ h2 {
     .footer-bottom {
         flex-direction: column;
         gap: 8px;
+    }
+
+    .projects {
+        padding: 85px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 320px;
+    }
+
+    @media (max-width: 900px) {
+        .technology-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 550px) {
+        .technology-grid {
+            grid-template-columns: 1fr;
+        }
     }
 }
