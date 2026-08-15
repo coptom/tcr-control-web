@@ -735,6 +735,14 @@ h2 {
     font-size: 14px;
 }
 
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 .footer {
     background: #070c11;
     border-top: 1px solid #1f2a34;
