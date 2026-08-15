@@ -45,3 +45,48 @@ mainNav.querySelectorAll("a").forEach((link) => {
     });
 
 });
+
+const contactForm = document.querySelector("#contactForm");
+const formStatus = document.querySelector("#formStatus");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        formStatus.textContent = "Odosielam správu...";
+
+        const formData = new FormData(contactForm);
+
+        const data = {
+            name: formData.get("name"),
+            company: formData.get("company"),
+            email: formData.get("email"),
+            phone: formData.get("phone"),
+            message: formData.get("message")
+        };
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.message || "Chyba pri odosielaní.");
+            }
+
+            formStatus.textContent = "Ďakujeme. Správa bola úspešne odoslaná.";
+            contactForm.reset();
+
+        } catch (error) {
+            console.error(error);
+            formStatus.textContent =
+                "Správu sa nepodarilo odoslať. Skúste to prosím znova.";
+        }
+    });
+}
