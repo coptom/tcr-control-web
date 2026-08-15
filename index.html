@@ -13,7 +13,7 @@
     <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="https://tcr-control.sk/">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="TCR Control | Robotics & Industrial Automation">
     <meta property="og:description" content="Robotika, PLC systémy, commissioning a priemyselná automatizácia.">
@@ -21,8 +21,9 @@
     <meta property="og:url" content="https://tcr-control.sk/">
     <meta property="og:image" content="https://tcr-control.sk/images/og-image.png">
     <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630"><meta property="og:image:alt" content="TCR Control – Robotics & Industrial Automation">
-    
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="TCR Control – Robotics & Industrial Automation">
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TCR Control | Robotics & Industrial Automation">
     <meta name="twitter:description" content="Robotika, PLC systémy, commissioning a priemyselná automatizácia.">
@@ -40,10 +41,9 @@
     <header class="header">
         <div class="container nav">
 
-            <div class="logo">
-                <strong>TCR</strong>
-                <span>CONTROL</span>
-            </div>
+            <a href="#home" class="logo">
+                <img src="images/logo.png" alt="TCR Control">
+            </a>
 
             <nav id="main-nav">
                 <a href="#home">Domov</a>
@@ -353,7 +353,6 @@
 
         </section>
 
-
         <section id="contact" class="contact">
 
             <div class="container">
@@ -374,31 +373,28 @@
                             Ozvite sa nám.
                         </p>
 
-                        <a href="mailto:tomas.cop@tcr-control.sk" class="button contact-button">
+                        <a href="mailto:info@tcr-control.sk" class="button contact-button">
                             Napísať e-mail
                         </a>
                     </div>
-
 
                     <div class="contact-info">
 
                         <div class="contact-block">
                             <span class="contact-label">E-MAIL</span>
 
-                            <a href="mailto:tomas.cop@tcr-control.sk">
-                                tomas.cop@tcr-control.sk
+                            <a href="mailto:info@tcr-control.sk">
+                                info@tcr-control.sk
                             </a>
                         </div>
-
 
                         <div class="contact-block">
                             <span class="contact-label">TELEFÓN</span>
 
-                            <a href="tel:+421XXXXXXXXX">
+                            <a href="tel:+421908106254">
                                 +421 908 106 254
                             </a>
                         </div>
-
 
                         <div class="contact-block">
                             <span class="contact-label">SPOLOČNOSŤ</span>
@@ -408,7 +404,6 @@
                                 Slovenská republika
                             </p>
                         </div>
-
 
                         <div class="contact-block">
                             <span class="contact-label">ZAMERANIE</span>
@@ -423,6 +418,57 @@
                     </div>
 
                 </div>
+
+                <br>
+                <br>
+                <br>
+
+                <form id="contactForm" class="contact-form">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="name">Meno</label>
+                            <input type="text" id="name" name="name" placeholder="Vaše meno" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Spoločnosť</label>
+                            <input type="text" id="company" name="company" placeholder="Názov spoločnosti">
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="vas@email.sk" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefón</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+421">
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="message">Správa</label>
+
+                        <textarea id="message" name="message" rows="6"
+                            placeholder="Stručne nám opíšte váš projekt alebo požiadavku..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="form-button">
+                        ODOSLAŤ DOPYT
+                    </button>
+
+                    <p id="formStatus" class="form-status"></p>
+
+                </form>
 
             </div>
 
@@ -454,11 +500,11 @@
             </div>
 
             <div class="footer-contact">
-                <a href="mailto:tomas.cop@tcr-control.sk">
-                    tomas.cop@tcr-control.sk
+                <a href="mailto:info@tcr-control.sk">
+                    info@tcr-control.sk
                 </a>
 
-                <a href="tel:+421XXXXXXXXX">
+                <a href="tel:+421908106254">
                     +421 908 106 254
                 </a>
             </div>

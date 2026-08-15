@@ -41,24 +41,15 @@ body {
 
 .logo {
     display: flex;
-    flex-direction: column;
-    line-height: 0.85;
-    text-transform: uppercase;
+    align-items: center;
+    text-decoration: none;
 }
 
-.logo strong {
-    color: #ffffff;
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: 3px;
-}
-
-.logo span {
-    color: #00a8ff;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 6px;
-    margin-top: 8px;
+.logo img {
+    width: 98px;
+    height: 98px;
+    object-fit: contain;
+    display: block;
 }
 
 nav {
@@ -623,6 +614,126 @@ h2 {
     line-height: 1.6;
 }
 
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.contact-form-wrapper {
+    width: 100%;
+    margin-top: 80px;
+    padding-top: 55px;
+
+    border-top: 1px solid #26323e;
+}
+
+.form-heading {
+    margin-bottom: 35px;
+}
+
+.form-heading h3 {
+    margin-top: 10px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #d2d8de;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 16px;
+
+    background: #0b1118;
+    color: #ffffff;
+
+    border: 1px solid #26323e;
+    border-radius: 2px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #53606b;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00a8ff;
+    box-shadow: 0 0 0 2px rgba(0, 168, 255, 0.08);
+}
+
+.form-button {
+    align-self: flex-start;
+
+    padding: 15px 28px;
+
+    border: 0;
+    border-radius: 3px;
+
+    background: #00a8ff;
+    color: #071018;
+
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 168, 255, 0.18);
+}
+
+.form-status {
+    min-height: 22px;
+    color: #9aa6b2;
+    font-size: 14px;
+}
+
 .footer {
     background: #070c11;
     border-top: 1px solid #1f2a34;
@@ -846,6 +957,10 @@ h2 {
 
     .project-card {
         min-height: 320px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
     }
 
     @media (max-width: 900px) {
